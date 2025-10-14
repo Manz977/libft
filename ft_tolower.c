@@ -1,44 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 18:09:50 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/13 15:31:27 by mamonzer         ###   ########.fr       */
+/*   Created: 2025/10/14 16:16:00 by mamonzer          #+#    #+#             */
+/*   Updated: 2025/10/14 16:19:43 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_tolower(int c)
 {
-	size_t			i;
-	unsigned char	*p;
-
-	p = s;
-	i = 0;
-	while (i < n)
+	if (c >= 65 && c <= 90)
 	{
-		p[i] = c;
-		i++;
+		return (c + 32);
 	}
-	return (s);
+	return (c);
 }
 
-// #include <stdio.h>
+//#include <stdio.h>
 
 // int	main(void)
-// {
-// 	char b[10];
-// 	int i;
-// 	i = 0;
-// 	ft_memset(b, 'a', sizeof(char) * 10);
+//{
+//	int	c;
+//	int	r;
 
-// 	while (i < 10)
-// 	{
-// 		printf("%c ", b[i]);
-// 		i++;
-// 	}
-// }
+//	c = 65;
+//	r = ft_tolower(c);
+//	printf("%c\n", r);
+//	return (0);
+//}

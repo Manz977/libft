@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 18:09:50 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/13 15:31:27 by mamonzer         ###   ########.fr       */
+/*   Created: 2025/10/13 20:47:20 by mamonzer          #+#    #+#             */
+/*   Updated: 2025/10/14 12:15:40 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t	len;
+	size_t	i;
 
-	p = s;
-	i = 0;
-	while (i < n)
+	len = ft_strlen(src);
+	if (dstsize == 0)
 	{
-		p[i] = c;
+		return (len);
+	}
+	i = 0;
+	while (src[i] && i < dstsize - 1)
+	{
+		dst[i] = src[i];
 		i++;
 	}
-	return (s);
+	dst[i] = '\0';
+	return (len);
 }
 
-// #include <stdio.h>
+//#include <stdio.h>
+//#include <string.h>
 
 // int	main(void)
-// {
-// 	char b[10];
-// 	int i;
-// 	i = 0;
-// 	ft_memset(b, 'a', sizeof(char) * 10);
+//{
+//	char	s[] = "Manar";
+//	char	d[6];
+//	size_t	i;
 
-// 	while (i < 10)
-// 	{
-// 		printf("%c ", b[i]);
-// 		i++;
-// 	}
-// }
+//	i = ft_strlcpy(d, s, sizeof(char) * 6);
+//	printf("%li\n", i);
+//}

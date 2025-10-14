@@ -6,13 +6,15 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 22:26:59 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/12 16:43:14 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/14 11:03:26 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s != '\0')
