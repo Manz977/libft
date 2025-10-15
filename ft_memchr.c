@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 20:57:38 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/15 14:51:25 by mamonzer         ###   ########.fr       */
+/*   Created: 2025/10/15 15:06:49 by mamonzer          #+#    #+#             */
+/*   Updated: 2025/10/15 15:32:11 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	const unsigned char	*str;
+	unsigned char		cc;
 	size_t				i;
 
-	s = (const unsigned char *)src;
-	d = (unsigned char *)dest;
+	str = (const unsigned char *)s;
+	cc = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		d[i] = s[i];
+		if (str[i] == cc)
+		{
+			return ((void *)&str[i]);
+		}
 		i++;
 	}
-	return (dest);
+	return (NULL);
 }
 
 //#include <stdio.h>
@@ -34,14 +37,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 // int	main(void)
 //{
-//	char	s[] = "ManarMonzer";
-//	char	d[12];
-//	char	c[] = "abcdefghijklmnopqurstuvwxyz";
-//	char	g[27];
+//	char	data[] = {'q', 'r', 's', 't', 'p', 'a', 'x'};
+//	char	*pos;
+//	char	*p;
 
-//	ft_memcpy(d, s, sizeof(char) * 12);
-//	printf("My: %s\n", d);
-//	memcpy(g, c, sizeof(char) * 27);
-//	printf("g: %s\n", g);
+//	pos = memchr(data, 't', 7);
+//	p = ft_memchr(data, 't', 7);
+//	printf("main function pos[0] = %c\n", pos[0]);
+//	printf("my function pos[0] = %c\n", p[0]);
 //	return (0);
 //}
