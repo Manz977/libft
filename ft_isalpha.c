@@ -6,23 +6,24 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 18:54:36 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/11 21:13:06 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:52:26 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(char c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
 }
 
-// #include <stdio.h>
+//#include <stdio.h>
 
 // int	main(void)
-// {
-// 	char c;
-// 	int i;
-// 	i = 0;
-// 	c = '1';
-// 	i = ft_isalpha(c);
-// 	printf("%d", i);
-// }
+//{
+//	char	c;
+//	int		i;
+
+//	i = 0;
+//	c = 'a';
+//	i = ft_isalpha(c);
+//	printf("%d", i);
+//}

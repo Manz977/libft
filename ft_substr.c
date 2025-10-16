@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:16:00 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/16 12:34:08 by mamonzer         ###   ########.fr       */
+/*   Created: 2025/10/16 18:20:50 by mamonzer          #+#    #+#             */
+/*   Updated: 2025/10/16 18:25:24 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 65 && c <= 90)
-	{
-		return (c + 32);
-	}
-	return (c);
 }
-
-//#include <stdio.h>
-
-// int	main(void)
-//{
-//	int	c;
-//	int	r;
-
-//	c = 65;
-//	r = ft_tolower(c);
-//	printf("%c\n", r);
-//	return (0);
-//}
