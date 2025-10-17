@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	temp = malloc(count * size);
 	if (temp == NULL)
 	{
-		return (1);
+		return (NULL);
 	}
 	i = 0;
 	while (i < count * size)
