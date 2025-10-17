@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 17:11:13 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/16 18:15:46 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:38:59 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strdup(const char *s1)
 //		return (1);
 //	}
 //	printf("Original: %s\n", original);
-//	printf("Copy:     %s\n", copy);
+//		printf("Copy:     %s\n", copy);
 //	free(copy);
 //	return (0);
 //}

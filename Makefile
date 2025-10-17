@@ -6,7 +6,7 @@
 #    By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 19:11:57 by mamonzer          #+#    #+#              #
-#    Updated: 2025/10/16 16:59:06 by mamonzer         ###   ########.fr        #
+#    Updated: 2025/10/17 15:00:52 by mamonzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,4 +38,7 @@ SRCS = ft_isalpha.c \
 		ft_strnstr.c \
 		ft_atoi.c \
 		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
 

@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:51:30 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/16 17:34:25 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:57:40 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	temp = malloc(count * size);
 	if (temp == NULL)
 	{
-		return (1);
+		return (NULL);
 	}
 	i = 0;
 	while (i < count * size)
