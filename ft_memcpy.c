@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 20:57:38 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/15 18:23:15 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:58:16 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 	size_t				i;
 
+	if (!dest && !src)
+	{
+		return (NULL);
+	}
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dest;
 	i = 0;

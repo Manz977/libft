@@ -5,18 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/15 19:11:57 by mamonzer          #+#    #+#              #
-#    Updated: 2025/10/17 15:00:52 by mamonzer         ###   ########.fr        #
+#    Created: 2025/10/23 22:17:42 by mamonzer          #+#    #+#              #
+#    Updated: 2025/10/23 22:19:33 by mamonzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-Name = libft.a
-
-CFLAGS: -Wall -Wextra -Werror
 CC = gcc
 
-SRCS = ft_isalpha.c \
+CFLAGS = -Wall -Wextra -Werror
+
+
+NAME = libft.a
+
+SRCS = 	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
@@ -41,4 +43,32 @@ SRCS = ft_isalpha.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
+OBJ_FILES	= $(SRCS:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ_FILES)
+	@ar rcs $(NAME) $(OBJ_FILES)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ_FILES)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

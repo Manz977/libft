@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:36:23 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/16 15:45:43 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/22 18:41:42 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		// conversion from char to number
 		j = j * 10 + (str[i] - '0');
 		i++;
 	}

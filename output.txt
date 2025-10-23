@@ -1,0 +1,20 @@
+0
+42
+-4242
+2147483647
+-2147483648
+1000000000
+=== TEST 1: Basic numbers to STDOUT ===
+
+=== TEST 2: Extreme values ===
+
+=== TEST 3: Write to STDERR ===
+
+=== TEST 4: Write to file ===
+Check 'test_output.txt' for output.
+
+=== TEST 5: Invalid FD ===
+
+=== TEST 6: Stress recursion ===
+
+All tests done.

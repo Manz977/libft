@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:25:13 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/15 19:11:16 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/23 13:47:02 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		s++;
 	}
-	if (c == '\0')
+	if (s[i] == cc)
 	{
 		return ((char *)&s[i]);
 	}

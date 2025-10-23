@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:13:48 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/17 14:55:10 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:33:29 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	{
 		return (NULL);
 	}
-	ft_strlcat(results, s1, len_s1);
-	ft_strlcat(results, s2, len_s1 + len_s2);
+	ft_strlcpy(results, s1, len_s1 + 1);
+	ft_strlcat(results, s2, len_s1 + len_s2 + 1);
 	return (results);
 }
 

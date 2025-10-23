@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 18:54:36 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/23 22:20:08 by mamonzer         ###   ########.fr       */
+/*   Created: 2025/10/22 12:43:44 by mamonzer          #+#    #+#             */
+/*   Updated: 2025/10/22 14:30:25 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
-}
+#include "libft.h"
 
-//#include <stdio.h>
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}
 
 // int	main(void)
 //{
-//	char	c;
-//	int		i;
+//	char	*s;
+//	int		fd;
 
-//	i = 0;
-//	c = 'a';
-//	i = ft_isalpha(c);
-//	printf("%d", i);
+//	s = "Manar";
+//	fd = 1;
+//	ft_putstr_fd(s, fd);
 //}

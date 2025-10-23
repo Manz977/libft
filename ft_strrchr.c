@@ -6,7 +6,7 @@
 /*   By: mamonzer <mamonzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:48:24 by mamonzer          #+#    #+#             */
-/*   Updated: 2025/10/15 14:14:33 by mamonzer         ###   ########.fr       */
+/*   Updated: 2025/10/23 22:12:48 by mamonzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	int		i;
 	char	*n;
 
+	i = 0;
 	n = NULL;
-	while (*s != '\0')
+	while (s[i])
 	{
-		if (*s == (char)c)
+		if (s[i] == (char)c)
 		{
 			// we use type casting because s is a const char and we want it to be a normal char
-			n = (char *)s;
+			n = (char *)&s[i];
 		}
-		s++;
+		i++;
 	}
-	if (c == '\0')
+	if (s[i] == (char)c)
 	{
-		n = (char *)s;
+		n = (char *)&s[i];
 	}
 	return (n);
 }
