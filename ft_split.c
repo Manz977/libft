@@ -13,39 +13,40 @@
 #include "libft.h"
 
 int		ft_word_count(const char *s, char c);
-void	ft_initiate_v(size_t *i, int *j, int *start);
+void	ft_initiate_v(int *i, int *j, int *start);
 char	**ft_free(char **str);
 char	*f_w(const char *str, int start, int end);
 
 char	**ft_split(const char *s, char c)
 {
 	char	**res;
-	size_t	i;
-	int		j;
-	int		start;
+	int		i, j, start;
 
 	ft_initiate_v(&i, &j, &start);
 	res = malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
-	while (i <= ft_strlen(s))
+	while (s[i])
 	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
-		{
-			res[j] = f_w(s, start, i);
-			if (!(res[j]))
-				return (ft_free(res));
-			start = -1;
-			j++;
-		}
-		i++;
+		while (s[i] && s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		res[j] = f_w(s, start, i);
+		if (!res[j])
+			return (ft_free(res));
+		j++;
 	}
+	res[j] = NULL;
 	return (res);
 }
 
-void	ft_initiate_v(size_t *i, int *j, int *start)
+
+
+void	ft_initiate_v(int *i, int *j, int *start)
 {
 	*i = 0;
 	*j = 0;
@@ -102,4 +103,33 @@ int	ft_word_count(const char *s, char c)
 		s++;
 	}
 	return (count);
+}
+
+int	main(void)
+{
+	char	**result;
+	char	*str = "Hello world this is C";
+	char	delimiter = ' ';
+	int		i = 0;
+
+	result = ft_split(str, delimiter);
+	if (!result)
+	{
+		printf("Error: ft_split returned NULL\n");
+		return (1);
+	}
+
+	printf("Original string: \"%s\"\n", str);
+	printf("Split by '%c':\n", delimiter);
+
+	while (result[i])
+	{
+		printf("Word %d: %s\n", i + 1, result[i]);
+		i++;
+	}
+
+	// Free allocated memory
+	ft_free(result);
+
+	return (0);
 }
